@@ -1,5 +1,7 @@
 # LiveKit 空间音频
 
+> 基于 [livekit-examples/spatial-audio](https://github.com/livekit-examples/spatial-audio) 的 fork，主要改动：UI 中文化、Next.js 升级到 13.5.6。
+
 [![示例 GIF](https://user-images.githubusercontent.com/8453967/221318613-861215da-1d71-492e-979f-dc7f18cb5c7f.gif)](https://spatial-audio-demo.livekit.io/)
 
 这是一个使用 LiveKit 实现空间音频的演示。用户加入一个 2D 小世界，根据彼此的位置和距离以立体声听到对方的音频。
@@ -13,7 +15,7 @@
 克隆仓库并安装依赖：
 
 ```bash
-git clone git@github.com:livekit-examples/spatial-audio.git
+git clone git@github.com:AliangHam/spatial-audio.git
 cd spatial-audio
 npm install
 ```
@@ -42,7 +44,7 @@ npm run dev
 
 这是一个 Next.js 应用，你可以一键部署到 Vercel：
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flivekit-examples%2Fspatial-audio&env=LIVEKIT_API_KEY,LIVEKIT_API_SECRET,LIVEKIT_WS_URL&envDescription=Get%20these%20from%20your%20cloud%20livekit%20project.&envLink=https%3A%2F%2Fcloud.livekit.io&project-name=my-spatial-audio-app)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAliangHam%2Fspatial-audio&env=LIVEKIT_API_KEY,LIVEKIT_API_SECRET,LIVEKIT_WS_URL&envDescription=Get%20these%20from%20your%20cloud%20livekit%20project.&envLink=https%3A%2F%2Fcloud.livekit.io&project-name=my-spatial-audio-app)
 
 更多生产环境部署信息请参考 [Next.js 部署文档](https://nextjs.org/docs/deployment)。
 
