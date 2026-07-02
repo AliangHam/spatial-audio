@@ -10,7 +10,7 @@ export const PoweredByLiveKit = () => {
         rel="noreferrer"
         href="https://livekit.io"
       >
-        <div className="text-xs text-primary sm:mr-2 mr-0">Powered by</div>
+        <div className="text-xs text-primary sm:mr-2 mr-0">技术提供</div>
         <div className="sm:h-full h-[20px] w-[60px] relative">
           <Image
             alt="livekit logo"

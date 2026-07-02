@@ -26,7 +26,7 @@ export default async function handler(
   res: NextApiResponse<ConnectionDetails | ErrorResponse>
 ) {
   if (req.method !== "POST") {
-    return res.status(400).json({ error: "Invalid method" });
+    return res.status(400).json({ error: "请求方法无效" });
   }
 
   const {
@@ -39,12 +39,12 @@ export default async function handler(
   const wsUrl = process.env.LIVEKIT_WS_URL;
 
   if (!apiKey || !apiSecret || !wsUrl) {
-    return res.status(500).json({ error: "Server misconfigured" });
+    return res.status(500).json({ error: "服务器配置错误" });
   }
 
-  if (!username) return res.status(400).json({ error: "Missing username" });
-  if (!character) return res.status(400).json({ error: "Missing character" });
-  if (!room) return res.status(400).json({ error: "Missing room_name" });
+  if (!username) return res.status(400).json({ error: "缺少用户名" });
+  if (!character) return res.status(400).json({ error: "缺少角色" });
+  if (!room) return res.status(400).json({ error: "缺少房间名" });
 
   const livekitHost = wsUrl?.replace("wss://", "https://");
 
@@ -53,7 +53,7 @@ export default async function handler(
 
   try {
     await roomService.getParticipant(room, username);
-    return res.status(401).json({ error: "Username already exists in room" });
+    return res.status(401).json({ error: "用户名已存在于房间中" });
   } catch {
     // If participant doesn't exist, we can continue
   }

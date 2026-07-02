@@ -20,7 +20,7 @@ export function MicrophoneSelector() {
           className="select select-sm w-full sm:max-w-[200px] max-w-[100px] m-2 select-none"
         >
           <option value={-1} disabled>
-            Choose your microphone
+            选择麦克风
           </option>
           {devices.map((m) => (
             <option value={m.deviceId} key={m.deviceId}>

@@ -20,27 +20,25 @@ export const JukeBoxModal = () => {
       return isMobile ? (
         <div className="flex items-center">
           <div className="text-neutral-content max-w-[300px]">
-            You are playing to the speaker
+            你正在播放音乐
           </div>
           <button
             className="btn btn-outline btn-sm btn-primary m-2"
             onClick={stopJukeBox}
           >
-            Stop
+            停止
           </button>
         </div>
       ) : (
         <div className="text-neutral-content">
-          You are playing to the speaker. Press{" "}
-          <span className="font-bold">[x]</span> to stop.
+          你正在播放音乐，按 <span className="font-bold">[x]</span> 停止。
         </div>
       );
     } else if (jukeBoxParticipant !== null) {
       // Someone else is playing
       return (
         <div className="text-neutral-content">
-          <span className="font-bold">{jukeBoxParticipant}</span> is playing to
-          the speaker
+          <span className="font-bold">{jukeBoxParticipant}</span> 正在播放音乐
         </div>
       );
     } else {
@@ -48,19 +46,18 @@ export const JukeBoxModal = () => {
       return isMobile ? (
         <div className="flex items-center">
           <div className="text-neutral-content w-[300px]">
-            Want to listen to spatially groovy tunes over WebRTC? Press play.
+            想通过 WebRTC 听空间音频音乐吗？点击播放。
           </div>
           <button
             className="btn btn-outline btn-sm btn-primary m-2"
             onClick={playJukeBox}
           >
-            Play
+            播放
           </button>
         </div>
       ) : (
         <div className="text-neutral-content max-w-[300px]">
-          Press <span className="font-bold">[x]</span> to play spatially groovy
-          tunes over WebRTC .
+          按 <span className="font-bold">[x]</span> 播放空间音频音乐。
         </div>
       );
     }

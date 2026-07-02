@@ -19,7 +19,7 @@ export default async function handler(
   res: NextApiResponse<RoomInfo | ErrorResponse>
 ) {
   if (req.method !== "GET") {
-    return res.status(400).json({ error: "Invalid method" });
+    return res.status(400).json({ error: "请求方法无效" });
   }
 
   const apiKey = process.env.LIVEKIT_API_KEY;
@@ -28,7 +28,7 @@ export default async function handler(
   const { room } = req.query as Query;
 
   if (!apiKey || !apiSecret || !wsUrl) {
-    return res.status(500).json({ error: "Server misconfigured" });
+    return res.status(500).json({ error: "服务器配置错误" });
   }
 
   const livekitHost = wsUrl?.replace("wss://", "https://");

@@ -31,7 +31,7 @@ export function RoomInfo({ roomName }: Props) {
         <span className="countdown font-mono text-6xl">
           <span style={{ "--value": roomInfo.num_participants } as any}></span>
         </span>
-        <div className="text-xs">Participants currently in room</div>
+        <div className="text-xs">当前房间内人数</div>
       </div>
     </div>
   );

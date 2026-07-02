@@ -10,7 +10,7 @@ export const GithubLink = () => {
         rel="noreferrer"
         href="https://github.com/livekit-examples/spatial-audio"
       >
-        <div className="text-xs text-secondary sm:mr-2 mr-0">View Source</div>
+        <div className="text-xs text-secondary sm:mr-2 mr-0">查看源码</div>
         <div className="h-[30px] w-[30px] relative">
           <Image
             alt="livekit logo"

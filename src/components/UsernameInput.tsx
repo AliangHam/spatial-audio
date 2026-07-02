@@ -20,10 +20,10 @@ export function UsernameInput({ submitText, onSubmit }: Props) {
             value={username}
             onChange={(e) => setUsername(e.currentTarget.value)}
             type="text"
-            placeholder="Username"
+            placeholder="用户名"
             className="input input-bordered input-secondary"
           />
-          <button className="btn">Join</button>
+          <button className="btn">加入</button>
         </div>
       </div>
     </form>

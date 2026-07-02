@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
   reactStrictMode: false,
-  experimental: {
-    appDir: true,
-  },
   webpack: (config) => {
-        config.module.rules.push({
+    // Fix for paths containing '#' character on Windows
+    config.context = path.resolve(__dirname);
+    
+    config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"]
     });

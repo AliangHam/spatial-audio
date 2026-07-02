@@ -49,7 +49,7 @@ export const JukeBox = ({ position, backgroundZIndex }: Props) => {
           anchor={[0.5, 0.9]}
           x={0}
           y={-60}
-          text={`${jukeBoxParticipant}'s Speaker`}
+          text={`${jukeBoxParticipant} 的音箱`}
           style={
             new TextStyle({
               fill: "0xffffff",

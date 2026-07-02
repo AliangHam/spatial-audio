@@ -83,7 +83,7 @@ export default function Page({ params: { room_name } }: Props) {
           onSelectedCharacterChange={setSelectedCharacter}
         />
         <UsernameInput
-          submitText="Join Room"
+          submitText="加入房间"
           onSubmit={async (username) => {
             try {
               // TODO unify this kind of pattern across examples, either with the `useToken` hook or an equivalent

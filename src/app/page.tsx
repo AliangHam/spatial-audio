@@ -11,7 +11,7 @@ export default function Home() {
 
   const joinRoom = useCallback(() => {
     if (roomName === "") {
-      toast.error("Please enter a room name");
+      toast.error("请输入房间名称");
       return;
     }
     router.push(`/room/${roomName}`);
@@ -21,7 +21,7 @@ export default function Home() {
     <main>
       <Toaster />
       <div className="relative flex flex-col items-center justify-center h-screen w-screen">
-        <h1 className="text-4xl mb-8 p-2">Spatial Audio LiveKit Example App</h1>
+        <h1 className="text-4xl mb-8 p-2">LiveKit 空间音频示例</h1>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -34,10 +34,10 @@ export default function Home() {
                 value={roomName}
                 onChange={(e) => setRoomName(e.currentTarget.value)}
                 type="text"
-                placeholder="Room Name"
+                placeholder="房间名称"
                 className="input input-bordered input-secondary"
               />
-              <button className="btn">Enter Room</button>
+              <button className="btn">进入房间</button>
             </div>
           </div>
         </form>
